@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">wish-it</string>
+
+    <!-- 데이터 입력 안내 -->
+    <string name="info_tv1">잠깐!</string>
+    <string name="info_tv2">당신의 정보가 필요합니다</string>
+    <string name="info_tv3">앱 실행을 위해 당신에\n대한 몇가지 정보가 필요합니다.</string>
+    <string name="info_btnNext">알겠습니다</string>
+
+    <!-- 1번 데이터 입력 -->
+    <string name="data1_tv1">1/3</string>
+    <string name="data1_tv2">정보를 입력해주세요:)</string>
+
+    <string name="data_btnNext">다음으로</string>
 </resources>

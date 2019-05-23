@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="orange">#FFB833</color>
+    <color name="gray">#C9C9C9</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="t_orange">#FFB833</color>
+    <color name="t_black">#1B1C20</color>
+    <color name="t_lightgray">#D9D9D9</color>
+    <color name="t_white">#FFFFFF</color>
+
+    <color name="blue_grad_start">#C1F4FF</color>
+    <color name="blue_grad_end">#198CFF</color>
+    <color name="red_grad_start">#FFBEC6</color>
+    <color name="red_grad_end">#FF2F57</color>
 </resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 평상 시(활성화) -->
+    <item
+        android:state_focused="false"
+        android:state_pressed="false">
+        <shape>
+            <solid android:color="@color/orange" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+    <!-- 비활성화 시 -->
+    <item
+        android:state_focused="false"
+        android:state_pressed="false"
+        android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/gray" />
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+
+</selector>
