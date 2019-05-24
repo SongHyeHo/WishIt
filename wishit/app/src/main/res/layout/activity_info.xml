@@ -50,7 +50,6 @@
             android:textSize="22dp"
             android:fontFamily="@font/hansanslight"
             android:textColor="@color/t_black"
-            android:layout_below="@+id/uline"
             android:textAlignment="center"
             android:layout_gravity="center"
             android:lineSpacingExtra="10dp"/>
@@ -61,12 +60,15 @@
         android:id="@+id/btnNext"
         android:layout_width="match_parent"
         android:layout_height="55dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
         android:text="@string/info_btnNext"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/hansansbold"
         android:textColor="@color/t_white"
         android:textSize="17dp"
-        android:background="@drawable/radius_button"/>
+        android:background="@drawable/radius_button"
+        android:onClick="onClick"/>
 
 </RelativeLayout>
