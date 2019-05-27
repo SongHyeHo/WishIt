@@ -1,10 +1,12 @@
 package com.portfolio.wish_it;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.ToggleButton;
 
@@ -43,5 +45,16 @@ public class DataSet2 extends Activity {
                 }
             });
         }
+
+        //데이터입력 3으로 이동
+        Button btn = (Button) findViewById(R.id.btnNext);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //데이터입력3 페이지로 이동
+                startActivity(new Intent(DataSet2.this, DataSet3.class));
+            }
+        });
     }
 }

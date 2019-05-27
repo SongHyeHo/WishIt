@@ -30,5 +30,8 @@
     <!-- 데이터 입력 2 페이지 -->
     <activity android:name=".DataSet2"/>
 
+    <!-- 데이터 입력 3 페이지 -->
+    <activity android:name=".DataSet3"/>
+
     </application>
 </manifest>

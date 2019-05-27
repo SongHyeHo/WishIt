@@ -6,7 +6,12 @@
         <!-- No Title Bar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
+        <item name="colorAccent">#FFB833</item>
     </style>
 
+    <!-- Dialog Color Set -->
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">#FFB833</item>
+    </style>
 
 </resources>

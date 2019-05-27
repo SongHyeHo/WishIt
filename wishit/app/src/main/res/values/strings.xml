@@ -15,4 +15,7 @@
 
     <!-- 2번 데이터 입력 -->
     <string name="data2_tv1">2/3</string>
+
+    <!-- 3번 데이터 입력 -->
+    <string name="data3_tv1">3/3</string>
 </resources>

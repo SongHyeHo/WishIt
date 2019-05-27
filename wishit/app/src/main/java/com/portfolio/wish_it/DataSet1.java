@@ -88,6 +88,7 @@ public class DataSet1 extends Activity {
                     }
                 });
 
+        //데이터입력 2으로 이동
         Button btn = (Button) findViewById(R.id.btnNext);
 
         btn.setOnClickListener(new View.OnClickListener() {
