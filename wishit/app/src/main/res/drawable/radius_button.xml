@@ -4,7 +4,8 @@
     <!-- 평상 시(활성화) -->
     <item
         android:state_focused="false"
-        android:state_pressed="false">
+        android:state_pressed="false"
+        android:state_enabled="true">
         <shape>
             <solid android:color="@color/orange" />
             <corners android:radius="10dp" />

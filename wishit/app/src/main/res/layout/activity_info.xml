@@ -68,7 +68,6 @@
         android:fontFamily="@font/hansansbold"
         android:textColor="@color/t_white"
         android:textSize="17dp"
-        android:background="@drawable/radius_button"
-        android:onClick="onClick"/>
+        android:background="@drawable/radius_button" />
 
 </RelativeLayout>

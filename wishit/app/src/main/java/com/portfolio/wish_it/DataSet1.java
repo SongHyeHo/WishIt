@@ -1,6 +1,7 @@
 package com.portfolio.wish_it;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -9,6 +10,7 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -85,7 +87,15 @@ public class DataSet1 extends Activity {
                         }
                     }
                 });
+
+        Button btn = (Button) findViewById(R.id.btnNext);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //데이터입력2 페이지로 이동
+                startActivity(new Intent(DataSet1.this, DataSet2.class));
+            }
+        });
     }
-
-
 }
