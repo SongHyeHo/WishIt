@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.TimePickerDialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,7 @@ public class DataSet3 extends Activity {
     //시간 설정 Dialog 변수 선언
     public int shour, sminute;
     public int ehour, eminute;
+    String stime, etime;
 
     TextView tvStart, tvEnd;
 
@@ -61,16 +63,16 @@ public class DataSet3 extends Activity {
                         //두자리수 맞춰주기용 0 끼워넣기
                         shour = hourOfDay;
                         sminute = min;
-                        String time = ampm+shour+":";
+                        stime = ampm+shour+":";
 
                         if(sminute < 10) {
-                            time += "0"+sminute;
+                            stime += "0"+sminute;
                         }
                         else
-                            time += sminute;
+                            stime += sminute;
 
                         //TextView에 값 삽입
-                        tvStart.setText(time);
+                        tvStart.setText(stime);
                         //색변경
                         tvStart.setTextColor(Color.rgb(255, 184, 51));
                         //버튼 활성화
@@ -106,16 +108,16 @@ public class DataSet3 extends Activity {
                         //두자리수 맞춰주기용 0 끼워넣기
                         ehour = hourOfDay;
                         eminute = min;
-                        String time = ampm+ehour+":";
+                        etime = ampm+ehour+":";
 
                         if(eminute < 10) {
-                            time += "0"+eminute;
+                            etime += "0"+eminute;
                         }
                         else
-                            time += eminute;
+                            etime += eminute;
 
                         //TextView에 값 삽입
-                        tvEnd.setText(time);
+                        tvEnd.setText(etime);
                         //색변경
                         tvEnd.setTextColor(Color.rgb(255, 184, 51));
                         //버튼 활성화
@@ -132,10 +134,24 @@ public class DataSet3 extends Activity {
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    //시간 제약(같은 시간을 입력하면 안됨)
                     if(shour == ehour && sminute == eminute) {
                         Toast.makeText(getApplicationContext(), "시작/종료시간을 확인해주세요.", Toast.LENGTH_LONG).show();
                         btn3.setEnabled(false);
                     }
+
+                    //전 엑티비티로부터 값 불러오기
+                    Intent intent = getIntent();
+
+                    //데이터이동용 Intent
+                    Intent intent3toS = new Intent(DataSet3.this, Summary.class);
+                    intent3toS.putExtra("payDay", intent.getExtras().getString("payDay"));  //월급날
+                    intent3toS.putExtra("salary", intent.getExtras().getString("salary"));  //월급
+                    intent3toS.putExtra("DayOfWeek", intent.getExtras().getString("DayOfWeek"));    //요일 배열
+                    intent3toS.putExtra("StartTime", stime);    //출근시간
+                    intent3toS.putExtra("EndTime", etime);      //퇴근시간
+
+                    startActivity(intent3toS);
                 }
             });
     }

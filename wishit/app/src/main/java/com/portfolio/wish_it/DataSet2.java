@@ -77,8 +77,25 @@ public class DataSet2 extends Activity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //전 엑티비티에서 값 가져오기용 Intent
+                Intent intent = getIntent();
+
+                //데이터 이동을 위한 Intent
+                Intent intent2to3 = new Intent(DataSet2.this, DataSet3.class);
+                intent2to3.putExtra("payDay", intent.getExtras().getString("payDay"));  //월급날
+                intent2to3.putExtra("salary", intent.getExtras().getString("salary"));  //월급
+
+                String weekday = "";
+                for(int i = 0; i < 7; i++) {
+                    if(tbtn[i].isChecked()) {
+                        weekday += tbtn[i].getText().toString() + "  ";
+                    }
+                }
+
+                intent2to3.putExtra("DayOfWeek", weekday);
+
                 //데이터입력3 페이지로 이동
-                startActivity(new Intent(DataSet2.this, DataSet3.class));
+                startActivity(intent2to3);
             }
         });
     }

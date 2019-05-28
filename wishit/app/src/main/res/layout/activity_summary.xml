@@ -9,7 +9,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/data3_tv1"
+        android:text="확인"
         android:textSize="30dp"
         android:fontFamily="@font/hansansbold"
         android:textColor="@color/t_orange"
@@ -28,96 +28,122 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/data1_tv2"
+        android:text="입력한 정보가 맞나요?"
         android:textSize="30dp"
         android:fontFamily="@font/hansansregular"
         android:textColor="@color/t_black"
         android:layout_below="@+id/uline"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="-10dp" />
-    <!--______________________________________________________________________-->
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerInParent="true">
 
-
-        <TextView
-            android:id="@+id/textView3"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/hansanslight"
-            android:text="나는"
-            android:textColor="@color/t_black"
-            android:textSize="30dp" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ll2"
-            android:orientation="horizontal"
-            android:layout_marginTop="-30dp" >
-
-            <TextView
-                android:id="@+id/txtStarttime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/hansansregular"
-                android:text="오전 09:00"
-                android:textColor="@color/gray"
-                android:textSize="30dp" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/hansanslight"
-                android:text="  부터"
-                android:textColor="@color/t_black"
-                android:textSize="30dp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-30dp"
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/txtEndtime"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
+                android:text="월급일"
+                android:textColor="@color/t_orange"
                 android:fontFamily="@font/hansansregular"
-                android:text="오후 18:00"
-                android:textColor="@color/gray"
-                android:textSize="30dp" />
+                android:textSize="25dp"/>
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/tvPayDay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/hansanslight"
-                android:text="  까지"
+                android:text=""
                 android:textColor="@color/t_black"
-                android:textSize="30dp" />
+                android:fontFamily="@font/hansanslight"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-20dp">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="월    급"
+                android:textColor="@color/t_orange"
+                android:fontFamily="@font/hansansregular"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:id="@+id/tvSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/t_black"
+                android:fontFamily="@font/hansanslight"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"/>
 
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/textView6"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/hansanslight"
-            android:text="일한다."
-            android:textColor="@color/t_black"
-            android:textSize="30dp"
-            android:layout_marginTop="-30dp"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="-20dp">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="요    일"
+                android:textColor="@color/t_orange"
+                android:fontFamily="@font/hansansregular"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:id="@+id/tvDOW"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/t_black"
+                android:fontFamily="@font/hansanslight"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-20dp">
+
+            <TextView
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:text="시    간"
+                android:textColor="@color/t_orange"
+                android:fontFamily="@font/hansansregular"
+                android:textSize="25dp"/>
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/t_black"
+                android:fontFamily="@font/hansanslight"
+                android:textSize="25dp"
+                android:layout_marginLeft="20dp"/>
+
+        </LinearLayout>
+
     </LinearLayout>
-    <!--______________________________________________________________________-->
 
     <Button
         android:id="@+id/btnNext"
@@ -125,7 +151,7 @@
         android:layout_height="55dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:text="@string/data_btnNext"
+        android:text="맞습니다"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="40dp"
         android:fontFamily="@font/hansansbold"

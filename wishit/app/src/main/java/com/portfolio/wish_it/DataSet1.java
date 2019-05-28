@@ -115,8 +115,13 @@ public class DataSet1 extends Activity {
                     btn.setEnabled(false);
                     return;
                 }
+
+                //데이터 전달
+                Intent intent1to2 = new Intent(DataSet1.this, DataSet2.class);
+                intent1to2.putExtra("payDay", pday.getText().toString());   //월급날
+                intent1to2.putExtra("salary", salary.getText().toString()); //월급
                 //데이터입력2 페이지로 이동
-                startActivity(new Intent(DataSet1.this, DataSet2.class));
+                startActivity(intent1to2);
             }
         });
     }
