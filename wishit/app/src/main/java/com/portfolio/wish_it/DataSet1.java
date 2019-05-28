@@ -9,10 +9,9 @@ import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.text.DecimalFormat;
 
@@ -38,6 +37,9 @@ public class DataSet1 extends Activity {
         pday = (EditText) findViewById(R.id.edt_payday);
         salary = (EditText) findViewById(R.id.edt_salary);
 
+        final Button btn = (Button) findViewById(R.id.btnNext);
+        btn.setEnabled(false);
+
         //입력 값변경 이벤트 추가
         pday.addTextChangedListener(
                 new TextWatcher() {
@@ -45,10 +47,17 @@ public class DataSet1 extends Activity {
                     public void afterTextChanged(Editable edit) {
                         //밑줄 색 변경
                         String s = edit.toString();
-                        if (s.length() > 0)
+                        if (s.length() > 0) {
+                            pday.setTextColor(Color.rgb(255, 184, 51));
                             ln1.setBackgroundColor(Color.rgb(255, 184, 51));
-                        else
+                            //버튼 활성 비활성화
+                            if(salary.getText().toString().length() > 0 )
+                                btn.setEnabled(true);
+                        }
+                        else {
                             ln1.setBackgroundColor(Color.rgb(217, 217, 217));
+                            btn.setEnabled(false);
+                        }
                     }
                     @Override
                     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -66,10 +75,16 @@ public class DataSet1 extends Activity {
                     public void afterTextChanged(Editable edit) {
                         //밑줄 색 변경
                         String s = edit.toString();
-                        if (s.length() > 0)
+                        if (s.length() > 0) {
                             ln2.setBackgroundColor(Color.rgb(255, 184, 51));
-                        else
+                            //버튼 활성화 비활성화
+                            if(pday.getText().toString().length() > 0)
+                                btn.setEnabled(true);
+                        }
+                        else {
                             ln2.setBackgroundColor(Color.rgb(217, 217, 217));
+                            btn.setEnabled(false);
+                        }
                     }
 
                     @Override
@@ -89,11 +104,17 @@ public class DataSet1 extends Activity {
                 });
 
         //데이터입력 2으로 이동
-        Button btn = (Button) findViewById(R.id.btnNext);
-
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //입력 값 범위 제약
+                if(Integer.parseInt(pday.getText().toString()) < 1 || Integer.parseInt(pday.getText().toString()) > 31) {
+                    Toast.makeText(getApplicationContext(), "날짜를 확인해주세요.", Toast.LENGTH_LONG).show();
+                    ln1.setBackgroundColor(Color.rgb(255, 90, 90));
+                    pday.setTextColor(Color.rgb(255, 90, 90));
+                    btn.setEnabled(false);
+                    return;
+                }
                 //데이터입력2 페이지로 이동
                 startActivity(new Intent(DataSet1.this, DataSet2.class));
             }

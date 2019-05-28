@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 public class InfoPage extends Activity {
-    Button btn;
+    Button btnN;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,8 +18,8 @@ public class InfoPage extends Activity {
 
         setContentView(R.layout.activity_info);
 
-        btn = (Button) findViewById(R.id.btnNext);
-        btn.setOnClickListener(new View.OnClickListener() {
+        btnN = (Button) findViewById(R.id.btnNext);
+        btnN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //데이터입력1 페이지로 이동
