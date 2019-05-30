@@ -18,4 +18,7 @@
 
     <!-- 3번 데이터 입력 -->
     <string name="data3_tv1">3/3</string>
+
+    <!-- 요약 페이지 -->
+    <string name="do_cancel"><u>아닙니다</u></string>
 </resources>

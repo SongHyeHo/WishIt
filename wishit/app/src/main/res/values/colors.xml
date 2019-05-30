@@ -3,6 +3,7 @@
     <color name="orange">#FFB833</color>
     <color name="gray">#C9C9C9</color>
     <color name="white">#FFFFFF</color>
+    <color name="opacity_0">#00FFFFFF</color>
 
     <color name="t_orange">#FFB833</color>
     <color name="t_black">#1B1C20</color>

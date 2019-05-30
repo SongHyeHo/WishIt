@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 평상 시(활성화) -->
+    <item
+        android:state_enabled="true">
+        <shape>
+            <stroke android:width="0dp" />
+            <solid android:color="@color/opacity_0" />
+        </shape>
+    </item>
+
+</selector>

@@ -158,5 +158,18 @@
         android:textColor="@color/t_white"
         android:textSize="17dp"
         android:background="@drawable/radius_button" />
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/do_cancel"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="@font/hansansbold"
+        android:textColor="@color/gray"
+        android:textSize="15dp"
+        android:background="@drawable/uline_button"
+        />
 
 </RelativeLayout>
