@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+    <!-- _________ Main Text Area _________-->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hansansthin"
+        android:textColor="@color/t_black"
+        android:textSize="55dp"
+        android:text="오늘"
+        android:layout_marginTop="-50dp"/>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_below="@id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hansansthin"
+        android:textColor="@color/t_black"
+        android:textSize="55dp"
+        android:text="출근해서"
+        android:layout_marginTop="-75dp" />
+
+    <TextView
+        android:id="@+id/currentMoney"
+        android:layout_below="@id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hansansregular"
+        android:textColor="@color/t_black"
+        android:textSize="55dp"
+        android:layout_marginTop="-75dp"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_below="@id/currentMoney"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hansansthin"
+        android:textColor="@color/t_black"
+        android:textSize="55dp"
+        android:text="원 벌었다."
+        android:layout_marginTop="-75dp"/>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_below="@id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/hansanslight"
+        android:textColor="@color/t_lightgray"
+        android:textSize="15dp"
+        android:text="오늘도 이만큼 버티셨네요! 힘내세요!"
+        android:layout_marginTop="-55dp"/>
+
+</RelativeLayout>

@@ -134,8 +134,8 @@ public class DataSet3 extends Activity {
             btn3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    //시간 제약(같은 시간을 입력하면 안됨)
-                    if(shour == ehour && sminute == eminute) {
+                    //시간 제약(같은 시간을 입력하면 안됨 || 시간은 같으면서 시작 분보다 끝나는 분이 크면안됨)
+                    if((shour == ehour && sminute == eminute) || (shour==ehour && sminute < eminute)) {
                         Toast.makeText(getApplicationContext(), "시작/종료시간을 확인해주세요.", Toast.LENGTH_LONG).show();
                         btn3.setEnabled(false);
                     }

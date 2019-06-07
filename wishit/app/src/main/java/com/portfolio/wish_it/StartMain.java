@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.view.WindowManager;
 
 public class StartMain extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +21,7 @@ public class StartMain extends Activity {
         hd.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(StartMain.this, MainMonth.class));
+                startActivity(new Intent(StartMain.this, MainDay.class));
                 finish();
             }
         }, 1500);

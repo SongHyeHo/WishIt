@@ -39,7 +39,11 @@
     <!-- 시작 스플래쉬 페이지 -->
     <activity android:name=".StartMain"/>
 
-    <!-- 시작 스플래쉬 페이지 -->
-    <activity android:name=".MainMonth"/>
+    <!-- 메인_일급 페이지 -->
+    <activity android:name=".MainDay"/>
+
+
+
+
     </application>
 </manifest>

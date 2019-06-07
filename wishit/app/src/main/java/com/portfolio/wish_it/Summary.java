@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Summary extends Activity {
-    //값을 저장할 전역 변수 선언
+    //값을 가져와 저장해둘 전역 변수 선언
     String payDay, salary;
     String StartTime, EndTime;
     String day;
@@ -42,8 +42,6 @@ public class Summary extends Activity {
         dow.setText(day);
         time.setText(StartTime+"~"+EndTime);
 
-
-
         //다음 페이지로 이동
         Button next = (Button) findViewById(R.id.btnNext);
         Button cancel = (Button) findViewById(R.id.btnCancel);
@@ -57,9 +55,10 @@ public class Summary extends Activity {
                 //editor에 put
                 editor.putString("payDay", payDay); //월급날   ex) 10
                 editor.putString("salary", salary); //월급    ex) 1,000,000
-                editor.putString("DayOfWeek", day); //요일    ex) 월 화 수
+                editor.putString("DayOfWeek", day); //요일    ex) 월  화  수
                 editor.putString("StartTime", StartTime);   //출근시간  ex) 오전 09:00
                 editor.putString("EndTime", EndTime);       //퇴근시간  ex) 오후 18:00
+
                 editor.putBoolean("IsNotFirst", true); //첫실행이 아님을 저장
                 editor.commit();    //완료
 

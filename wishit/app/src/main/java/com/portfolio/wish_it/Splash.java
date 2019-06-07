@@ -2,9 +2,9 @@ package com.portfolio.wish_it;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
 
 public class Splash extends Activity {
     @Override
@@ -19,8 +19,17 @@ public class Splash extends Activity {
 
     private class splashHandler implements Runnable {
         public void run() {
-            //로딩 후 InfoPage 로 이동
-            startActivity(new Intent(getApplication(), InfoPage.class));
+            //저장값 가져오기(첫실행 여부)
+            SharedPreferences pref = getSharedPreferences("pref", MODE_PRIVATE);
+            //이미 실행되었으면 값이 있으므로 바로 메인으로 이동
+            if(pref.getBoolean("IsNotFirst", false)) {
+                startActivity(new Intent(getApplication(), MainDay.class));
+            }
+            //첫 실행이므로 데이터가 필요하여 입력 창으로 이동
+            else
+                //로딩 후 InfoPage 로 이동
+                startActivity(new Intent(getApplication(), InfoPage.class));
+
             //로딩 페이지 Activity 스택에서 제외
             Splash.this.finish();
         }
