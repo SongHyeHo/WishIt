@@ -19,7 +19,7 @@ public class DataSet1 extends Activity {
     View ln1, ln2;
     EditText pday, salary;
     String result = "";
-    //화폐단위 출력용 변수
+    //화폐단위 출력용 포멧
     DecimalFormat df = new DecimalFormat("#,###");
 
     @Override
