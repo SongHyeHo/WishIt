@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">wish-it</string>
+    <string name="app_name">위시잇</string>
 
     <!-- 데이터 입력 안내 -->
     <string name="info_tv1">잠깐!</string>

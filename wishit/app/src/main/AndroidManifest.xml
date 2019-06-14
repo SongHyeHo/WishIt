@@ -42,8 +42,5 @@
     <!-- 메인_일급 페이지 -->
     <activity android:name=".MainDay"/>
 
-
-
-
     </application>
 </manifest>

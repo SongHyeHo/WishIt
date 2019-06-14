@@ -1,15 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/t1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/t_orange"
+        android:fontFamily="@font/hansansbold"
+        android:text="오늘은 쉬는날이네요."
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="오늘은 일 안해요!"
-        android:textSize="40dp"
-        android:layout_gravity="center" />
+        android:textColor="@color/t_black"
+        android:fontFamily="@font/hansanslight"
+        android:textSize="20dp"
+        android:text="일하느라 고생 많았어요 :)"
+        android:layout_below="@id/t1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-30dp" />
 
-</LinearLayout>
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/t_gray"
+        android:fontFamily="@font/hansanslight"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerInParent="true"
+        android:singleLine="false"
+        android:lineSpacingExtra="10dp"/>
+
+    <TextView
+        android:id="@+id/mainText_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/t_gray"
+        android:fontFamily="@font/hansanslight"
+        android:textSize="20dp"
+        android:layout_below="@id/mainText"
+        android:layout_alignRight="@id/mainText" />
+
+</RelativeLayout>
